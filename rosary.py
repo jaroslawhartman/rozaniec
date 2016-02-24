@@ -56,6 +56,7 @@ class Rosarist:
 		return mysteries[mysterytype][decade]
 
 	def mystery_for_today(self):
+	    random.seed(time.time())
 	    decate = random.randint(0, 4)
 	    mysterytype = self.find_mysterytype()
 	    mystery = self.find_mystery(decate, mysterytype)
